@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* 
   Variáveis para cores:
   --fundo-principal
@@ -7,3 +8,13 @@
   --destaque-inverso
   --fundo-card
 */
+
+*{
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1{
+  color: blue;
+}
