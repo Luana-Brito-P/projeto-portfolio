@@ -3,23 +3,24 @@ const body = document.body;
 
 // Persistência do tema
 const temasalvo = localStorage.getItem('tema');
-temaEscuro(temasalvo === 'escuro');
+temaEscuro(temasalvo === 'escuro');//se tema salvo for escuro a chamar a função e ficar escuro
 
 // Função para alternar entre tema claro e escuro
 function temaEscuro(tipo) {
-  if (tipo == true) {
-    body.classList.add('escuro');
+  if (tipo == true) { //se n tiver no escuro
+    body.classList.add('escuro'); //adiciona class escuro
     botao.innerHTML = '<i class="fa-solid fa-sun"></i>';
-  } else {
-    body.classList.remove('escuro');
+  } else { // se tiver no escuro
+    body.classList.remove('escuro'); //remove class escuro
     botao.innerHTML = '<i class="fa-solid fa-moon"></i>';
   }
 }
 
+// ao clicar no botão
 botao.addEventListener('click', () => {
-  const isescuro = body.classList.toggle('escuro');
-  temaEscuro(isescuro);
-  localStorage.setItem('tema', isescuro ? 'escuro' : 'claro');
+  const isescuro = body.classList.toggle('escuro'); //isescuro adiciona a class escuro ao body
+  temaEscuro(isescuro); //chamda de função com o tipo isescuro
+  localStorage.setItem('tema', isescuro ? 'escuro' : 'claro');// se estiver no modo claro então o tema (la na memória) será "escuro" e vice-versa;
 });
 
 // Scroll suave para links de navegação
